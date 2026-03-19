@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-light: #FCD34D;
+  --color-gold: #F59E0B;
+  --color-gold-dark: #D97706;
+  --color-dark-bg: #0F0F0F;
+  --color-dark-card: #1A1A1A;
+  --font-display: "Cormorant Garamond", "Playfair Display", serif;
+  --font-body: "DM Sans", "Syne", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-body;
+  }
+  
+  ::selection {
+    @apply bg-gold-light/30 text-gold-light;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
