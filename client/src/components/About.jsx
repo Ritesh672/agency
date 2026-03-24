@@ -25,7 +25,7 @@ const About = () => {
             
             <div className="space-y-6 text-gray-400 font-light leading-relaxed">
               <p>
-                We started Arkive Digital because we were tired of agencies that vanish after onboarding. The bait-and-switch. The monthly reports that hide bad numbers behind vanity metrics.
+                We started Zivonx because we were tired of agencies that vanish after onboarding. The bait-and-switch. The monthly reports that hide bad numbers behind vanity metrics.
               </p>
               <p>
                 Our philosophy is simple: Every rupee you spend is tracked, optimized, and reported with complete transparency. We treat your ad budget like our own.

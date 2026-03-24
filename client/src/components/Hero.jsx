@@ -15,7 +15,7 @@ const Hero = () => {
           className="max-w-4xl"
         >
           <p className="text-gold text-xs tracking-[0.3em] font-medium uppercase mb-6">
-            Bangalore's Most Selective Growth Agency
+              Performance-Driven Growth Partner
           </p>
           
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] mb-8 text-white">

@@ -10,21 +10,21 @@ const Footer = () => {
           {/* Left Section: Brand & Positioning */}
           <div className="lg:col-span-5">
             <a href="#" className="inline-block font-display text-4xl font-semibold tracking-wide mb-6">
-              Arkive<span className="text-gold">.</span>
+              Zivonx<span className="text-gold">.</span>
             </a>
             <p className="text-gray-400 font-light text-base max-w-sm mb-10 leading-relaxed">
               A performance-driven growth partner for D2C brands scaling through ads, creatives, and strategy.
             </p>
             <div className="space-y-2">
               <p className="text-white text-sm tracking-[0.1em] font-medium">Bangalore, India</p>
-              <a href="mailto:hello@arkive.in" className="text-gold hover:text-white transition-colors text-sm tracking-wide">hello@arkive.in</a>
+              <a href="mailto:hello@zivonx.in" className="text-gold hover:text-white transition-colors text-sm tracking-wide">hello@zivonx.in</a>
             </div>
           </div>
 
           {/* Center Section: Navigation */}
           <div className="lg:col-span-3 lg:justify-self-center">
             <h4 className="text-white font-display text-xl mb-6">Navigation</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {['Home', 'Services', 'About', 'Case Studies', 'Contact'].map((link) => (
                 <li key={link}>
                   <a 
@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Bottom Strip */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
           <p className="text-gray-400 text-sm font-light order-2 md:order-1">
-            © 2025 Arkive Digital. All rights reserved.
+            © 2025 Zivonx. All rights reserved.
           </p>
           
           <p className="text-gray-500 text-xs italic font-light tracking-wide order-1 md:order-2 text-center md:text-left">
