@@ -17,7 +17,7 @@ const services = [
     title: "Paid Social & Search",
     description: "Full-funnel ad execution across Meta & Google with continuous A/B testing and budget optimization.",
     features: [
-      "Creative testing (10–20 variations/week)",
+      "Creative testing (10-20 variations/week)",
       "Audience & pixel optimization",
       "Budget scaling without performance drop"
     ]
@@ -35,7 +35,7 @@ const services = [
   {
     icon: <PenTool className="w-6 h-6 text-gold mb-6" strokeWidth={1.5} />,
     title: "Creative & Content",
-    description: "High-converting creatives designed for performance — from UGC to ad creatives that drive sales.",
+    description: "High-converting creatives designed for performance - from UGC to ad creatives that drive sales.",
     features: [
       "UGC & ad video production",
       "Scroll-stopping hooks & scripts",
@@ -46,9 +46,9 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-dark-bg relative border-b border-white">
+    <section id="services" className="py-32 bg-dark-bg relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -80,12 +80,12 @@ const Services = () => {
                   {service.description}
                 </p>
               </div>
-              
+
               <div className="mt-auto">
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-[13px] text-gray-300 font-light">
-                      <span className="text-gold mr-3 mt-0.5 opacity-70">✦</span>
+                      <span className="text-gold mr-3 mt-0.5 opacity-70">*</span>
                       <span>{feature}</span>
                     </li>
                   ))}
