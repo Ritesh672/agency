@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ClientMarquee from './components/ClientMarquee';
 import SocialProof from './components/SocialProof';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
@@ -69,6 +70,7 @@ function App() {
       <div className="relative z-10 font-body">
         <Navbar />
         <Hero />
+        <ClientMarquee />
         <SocialProof />
         <Services />
         <WhyUs />
