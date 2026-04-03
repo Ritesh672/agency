@@ -50,7 +50,7 @@ const ServiceCard = ({ service, index }) => (
 );
 
 const Services = () => (
-  <section id="services" className="py-16 sm:py-24 md:py-32 bg-dark-bg relative border-b border-white/10">
+  <section id="services" className="scroll-mt-24 py-16 sm:py-24 md:py-32 bg-dark-bg relative border-b border-white/10">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 min-w-0">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-12 sm:mb-20">
         <CharReveal text="What We Do" />

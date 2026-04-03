@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const founders = [
-  { initial: "D", name: "Dinesh Yelle", role: "Co-Founder & Marketing Lead", bio: "Leads strategy and client relationships. Experienced in D2C growth marketing — the brain behind the campaigns.", linkedin: "#", color: "from-amber-900/30 to-transparent" },
-  { initial: "R", name: "Ritesh Y.", role: "Co-Founder — Marketing & Dev", bio: "Works across both performance marketing and development. Builds and runs the ads, manages campaigns manually, and codes the tech side. The all-rounder keeping everything moving.", linkedin: "#", color: "from-gold/10 to-transparent" },
-  { initial: "A", name: "Atul Chauhan", role: "Co-Founder & Developer", bio: "Leads the technical build — websites, landing pages, and conversion-focused development that turns traffic into revenue.", linkedin: "#", color: "from-amber-900/20 to-transparent" },
+  { initial: "D", name: "Dinesh Yelle", bio: "Leads strategy and client relationships. Experienced in D2C growth marketing — the brain behind the campaigns.", linkedin: "#", color: "from-amber-900/30 to-transparent" },
+  { initial: "R", name: "Ritesh Y.", bio: "Works across both performance marketing and development. Builds and runs the ads, manages campaigns manually, and codes the tech side. The all-rounder keeping everything moving.", linkedin: "#", color: "from-gold/10 to-transparent" },
+  { initial: "A", name: "Atul Chauhan", bio: "Leads the technical build — websites, landing pages, and conversion-focused development that turns traffic into revenue.", linkedin: "#", color: "from-amber-900/20 to-transparent" },
 ];
 
 const CharReveal = ({ text, delay = 0 }) => (
@@ -60,8 +60,7 @@ const About = () => (
                 <div className="flex-1 relative z-10 min-w-0">
                   <div className="flex items-start justify-between mb-1">
                     <div className="min-w-0 flex-1 pr-2">
-                      <h3 className="text-white font-medium text-sm truncate">{founder.name}</h3>
-                      <p className="text-gold text-[10px] tracking-wider uppercase font-bold mb-1.5 leading-tight">{founder.role}</p>
+                      <h3 className="mb-1 text-white font-medium text-sm truncate">{founder.name}</h3>
                     </div>
                     <a href={founder.linkedin} className="text-gray-600 hover:text-gold transition-colors mt-0.5 flex-shrink-0" aria-label="LinkedIn">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

@@ -1,7 +1,7 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-dark-bg border-t border-white/5 pt-12 sm:pt-20 pb-8 sm:pb-10 relative overflow-hidden">
+    <footer className="bg-dark-bg border-t border-white/5 pt-12 sm:pt-20 pb-24 sm:pb-12 relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/5 blur-[100px] rounded-full pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 min-w-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-16 relative z-10">
@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
             <div className="space-y-1.5 mb-6 sm:mb-8">
               <p className="text-white text-sm tracking-[0.1em] font-medium">Bangalore, India</p>
-              <a href="mailto:hello@zivonx.in" className="text-gold hover:text-white transition-colors text-sm tracking-wide">hello@zivonx.in</a>
+              <a href="mailto:brandteam@zivonx.com" className="text-gold hover:text-white transition-colors text-sm tracking-wide break-all">brandteam@zivonx.com</a>
             </div>
             <div className="flex gap-3">
               {[

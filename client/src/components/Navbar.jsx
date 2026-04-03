@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { name: 'WORK', href: '#work' },
@@ -13,12 +13,24 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActive] = useState('');
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 400, damping: 40, restDelta: 0.001 });
+  const scrollRaf = useRef(0);
+  const scrollPending = useRef(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => {
+      if (scrollPending.current) return;
+      scrollPending.current = true;
+      scrollRaf.current = requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 50);
+        scrollPending.current = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(scrollRaf.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -44,14 +56,14 @@ const Navbar = () => {
     <>
       <motion.div
         className="fixed top-0 left-0 right-0 h-[2px] z-[60] origin-left will-change-transform"
-        style={{ scaleX, background: 'linear-gradient(90deg, #8B7332, #F59E0B, #8B7332)' }}
+        style={{ scaleX: scrollYProgress, background: 'linear-gradient(90deg, #8B7332, #F59E0B, #8B7332)' }}
       />
 
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-[2px] w-full z-50 transition-all duration-300 ${
+        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+        className={`fixed top-[2px] w-full z-50 motion-safe:transition-[padding,background-color,box-shadow,border-color] motion-safe:duration-300 motion-safe:ease-out ${
           scrolled || mobileOpen
             ? 'bg-[#111111]/95 backdrop-blur-xl py-3 shadow-lg shadow-black/30 border-b border-white/[0.06]'
             : 'bg-[#0a0a0a]/60 backdrop-blur-sm py-6'
@@ -89,7 +101,7 @@ const Navbar = () => {
                       className="absolute bottom-0 left-0 h-[1px] bg-gold"
                       initial={false}
                       animate={{ width: isActive ? '100%' : '0%' }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                     />
                   </a>
                 );
@@ -119,7 +131,7 @@ const Navbar = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              transition={{ duration: 0.32, ease: [0.25, 0.1, 0.25, 1] }}
               className="md:hidden overflow-hidden"
             >
               <div className="px-4 sm:px-6 pt-6 pb-8 flex flex-col gap-3 border-t border-white/[0.06] mt-4">

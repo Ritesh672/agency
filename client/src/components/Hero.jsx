@@ -9,9 +9,9 @@ const WordReveal = ({ words, delay = 0 }) => (
     {words.map((word, i) => (
       <motion.span
         key={i}
-        initial={{ opacity: 0, y: 40, rotateX: -20 }}
+        initial={{ opacity: 0, y: 22, rotateX: -12 }}
         animate={{ opacity: 1, y: 0, rotateX: 0 }}
-        transition={{ duration: 0.7, delay: delay + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.58, delay: delay + i * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
         className="inline-block"
         style={{ transformOrigin: 'bottom center' }}
       >
@@ -31,7 +31,7 @@ const Hero = () => (
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.48, delay: 0.08, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-gold text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] font-medium uppercase mb-4 sm:mb-6"
         >
           Performance-Driven Growth Partner
@@ -44,7 +44,7 @@ const Hero = () => (
             <motion.span
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.58, delay: 0.58, ease: [0.25, 0.1, 0.25, 1] }}
               className="italic text-gold font-light inline-block"
             >
               Print
@@ -56,7 +56,7 @@ const Hero = () => (
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.55, delay: 0.95, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-gray-400 text-base sm:text-lg md:text-xl font-light max-w-xl mb-4 leading-relaxed"
         >
           ₹50L+ in client revenue managed monthly. Two partnerships. Zero wasted spend. We don't do average.
@@ -65,7 +65,7 @@ const Hero = () => (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.5, delay: 1.12, ease: [0.25, 0.1, 0.25, 1] }}
           className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8 sm:mb-12 text-[10px] sm:text-xs text-gray-500 font-medium tracking-widest uppercase"
         >
           <span className="flex items-center gap-2">
@@ -81,7 +81,7 @@ const Hero = () => (
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.35 }}
+          transition={{ duration: 0.55, delay: 1.22, ease: [0.25, 0.1, 0.25, 1] }}
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-full"
         >
           <a href="#work" className="w-full sm:w-auto min-h-12 sm:min-h-0 inline-flex items-center justify-center rounded-sm bg-gold hover:bg-gold-light text-black px-6 sm:px-8 py-3.5 text-center font-semibold transition-colors duration-300 text-base border border-gold-dark/20">

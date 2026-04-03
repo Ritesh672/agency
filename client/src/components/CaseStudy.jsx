@@ -22,7 +22,7 @@ const CharReveal = ({ text, delay = 0 }) => (
 );
 
 const CaseStudy = () => (
-  <section id="work" className="py-16 sm:py-24 md:py-32 bg-dark-bg relative overflow-hidden border-b border-white/10">
+  <section id="work" className="scroll-mt-24 py-16 sm:py-24 md:py-32 bg-dark-bg relative overflow-hidden border-b border-white/10">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[800px] h-[400px] sm:h-[800px] border border-gold/5 rounded-full blur-3xl opacity-20 pointer-events-none" />
 
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 min-w-0">

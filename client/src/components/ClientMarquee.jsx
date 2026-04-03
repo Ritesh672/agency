@@ -18,8 +18,8 @@ const ClientMarquee = () => {
       <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0a0a0a, transparent)' }} />
       <p className="text-center text-[10px] tracking-[0.35em] text-gray-600 uppercase font-medium mb-6 sm:mb-8">Brands We've Scaled</p>
       <div
-        className="flex"
-        style={{ animation: `marquee 24s linear infinite`, animationPlayState: paused ? 'paused' : 'running' }}
+        className="flex marquee-track"
+        style={{ animation: `marquee 32s linear infinite`, animationPlayState: paused ? 'paused' : 'running' }}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
