@@ -54,11 +54,11 @@ const Navbar = () => {
         className={`fixed top-[2px] w-full z-50 transition-all duration-300 ${
           scrolled || mobileOpen
             ? 'bg-[#111111]/95 backdrop-blur-xl py-3 shadow-lg shadow-black/30 border-b border-white/[0.06]'
-            : 'bg-[#0a0a0a]/60 backdrop-blur-sm py-4'
+            : 'bg-[#0a0a0a]/60 backdrop-blur-sm py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          <a href="#" className="flex items-baseline font-display text-xl md:text-2xl font-semibold tracking-wide group">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center gap-3 min-w-0">
+          <a href="#home" className="flex items-baseline font-display text-xl sm:text-2xl font-semibold tracking-wide group shrink-0">
             <motion.span initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               Zivon
             </motion.span>
@@ -66,7 +66,7 @@ const Navbar = () => {
               initial={{ opacity: 0, scale: 0, rotate: -180 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.6, type: 'spring', stiffness: 200 }}
-              className="text-gold text-2xl md:text-3xl font-bold inline-block group-hover:scale-110 transition-transform duration-300"
+              className="text-gold text-2xl sm:text-3xl font-bold inline-block group-hover:scale-110 transition-transform duration-300"
               style={{ textShadow: '0 0 12px rgba(201,168,76,0.6), 0 0 24px rgba(201,168,76,0.3)' }}
             >
               X
@@ -74,12 +74,16 @@ const Navbar = () => {
             <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 1 }} className="text-gold">.</motion.span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex gap-6">
+          <div className="hidden md:flex items-center gap-10">
+            <div className="flex gap-8">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.replace('#', '');
                 return (
-                  <a key={link.name} href={link.href} className="text-xs tracking-[0.22em] text-gray-300 hover:text-white transition-colors relative py-1">
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-sm tracking-widest text-gray-300 hover:text-white transition-colors relative py-1"
+                  >
                     {link.name}
                     <motion.span
                       className="absolute bottom-0 left-0 h-[1px] bg-gold"
@@ -91,7 +95,7 @@ const Navbar = () => {
                 );
               })}
             </div>
-            <a href="#contact" className="bg-gold text-black px-5 py-2 text-sm font-medium hover:bg-gold-light transition-colors duration-300 whitespace-nowrap">
+            <a href="#contact" className="bg-gold text-black px-6 py-2.5 text-sm font-medium hover:bg-gold-light transition-colors duration-300">
               Apply to Work With Us
             </a>
           </div>
@@ -118,7 +122,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="md:hidden overflow-hidden"
             >
-              <div className="px-6 pt-6 pb-8 flex flex-col gap-4 border-t border-white/[0.06] mt-4">
+              <div className="px-4 sm:px-6 pt-6 pb-8 flex flex-col gap-3 border-t border-white/[0.06] mt-4">
                 {navLinks.map((link, index) => (
                   <motion.a
                     key={link.name}
@@ -132,8 +136,8 @@ const Navbar = () => {
                     {link.name}
                   </motion.a>
                 ))}
-                <a href="#contact" onClick={() => setMobileOpen(false)} className="bg-gold text-black px-6 py-3 text-sm font-medium hover:bg-gold-light transition-colors duration-300 text-center mt-2">
-                  Apply to Work With Us
+                <a href="#contact" onClick={() => setMobileOpen(false)} className="w-full min-h-12 inline-flex items-center justify-center rounded-sm bg-gold text-black px-4 py-3.5 text-base font-semibold hover:bg-gold-light active:scale-[0.99] transition-colors duration-300 text-center mt-2 border border-gold-dark/20">
+                  Apply to work with us
                 </a>
               </div>
             </motion.div>

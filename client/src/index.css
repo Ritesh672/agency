@@ -11,8 +11,20 @@
 }
 
 @layer base {
+  html {
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-dark-bg text-white font-body;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  #root {
+    overflow-x: clip;
+    max-width: 100%;
   }
   
   ::selection {
@@ -22,10 +34,6 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight text-white;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 html {

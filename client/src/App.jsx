@@ -67,7 +67,7 @@ function App() {
         />
       </div>
 
-      <div className="relative z-10 font-body">
+      <div className="relative z-10 font-body min-w-0 max-w-full">
         <Navbar />
         <Hero />
         <ClientMarquee />
